@@ -2,7 +2,7 @@
 # brew install copilot-plus
 
 class CopilotPlus < Formula
-  desc "Voice + screenshot input wrapper for GitHub Copilot CLI"
+  desc "Voice + screenshots + model hotkeys + live agent monitor for GitHub Copilot CLI"
   homepage "https://github.com/Errr0rr404/copilot-plus"
   url "https://registry.npmjs.org/copilot-plus/-/copilot-plus-1.0.28.tgz"
   sha256 "30b42c82bb1c9b809abfbb1629c43abb9710b72e77eb64fa66e68e88ac7ffbd7"
@@ -42,11 +42,16 @@ class CopilotPlus < Formula
         copilot+ --setup
 
       Hotkeys inside copilot+:
-        Ctrl+R         →  Start / stop voice recording
-        Ctrl+P         →  Take a screenshot (attached as @path)
-        Ctrl+K         →  Open command palette
-        Option+1–9     →  Execute a prompt macro (macOS Apple Terminal)
-        Ctrl+1–9       →  Execute a prompt macro (kitty/WezTerm/Windows Terminal)
+        Ctrl+R              →  Start / stop voice recording
+        Ctrl+P              →  Take a screenshot (attached as @path)
+        Ctrl+K              →  Open command palette
+        Option+Shift+1–4    →  Switch workhorse model slot (macOS Terminal.app)
+        Ctrl+Shift+1–4      →  Switch workhorse model slot (kitty/WezTerm)
+        Option+1–9          →  Execute a prompt macro (macOS Apple Terminal)
+        Ctrl+1–9            →  Execute a prompt macro (kitty/WezTerm/Windows Terminal)
+
+      Monitor all running copilot sessions:
+        copilot+ --monitor
     EOS
   end
 
